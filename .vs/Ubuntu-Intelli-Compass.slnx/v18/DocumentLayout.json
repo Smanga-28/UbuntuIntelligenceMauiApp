@@ -1,0 +1,79 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Smangaliso Masiphula\\source\\repos\\Ubuntu-Intelli-Compass\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|c:\\users\\smangaliso masiphula\\source\\repos\\ubuntu-intelli-compass\\ubuntu-intelli-compass.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|solutionrelative:ubuntu-intelli-compass.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|c:\\users\\smangaliso masiphula\\source\\repos\\ubuntu-intelli-compass\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{53d10d51-d2d8-3452-ab88-12f687ed0782}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Smangaliso Masiphula\\source\\repos\\Ubuntu-Intelli-Compass\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\Smangaliso Masiphula\\source\\repos\\Ubuntu-Intelli-Compass\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAuwAgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T13:13:51.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Ubuntu-Intelli-Compass.csproj",
+              "DocumentMoniker": "C:\\Users\\Smangaliso Masiphula\\source\\repos\\Ubuntu-Intelli-Compass\\Ubuntu-Intelli-Compass.csproj",
+              "RelativeDocumentMoniker": "Ubuntu-Intelli-Compass.csproj",
+              "ToolTip": "C:\\Users\\Smangaliso Masiphula\\source\\repos\\Ubuntu-Intelli-Compass\\Ubuntu-Intelli-Compass.csproj",
+              "RelativeToolTip": "Ubuntu-Intelli-Compass.csproj",
+              "ViewState": "AgIAACsAAABgAAAAAAAhwDIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-11-16T09:54:32.461Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 490,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

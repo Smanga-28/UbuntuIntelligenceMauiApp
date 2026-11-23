@@ -52,13 +52,17 @@
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#000C1E" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\appicon.svg" Color="#000C1E" BaseSize="128,128" />
+		<MauiSplashScreen Include="Resources\Splash\appicon.svg" Color="#000C1E" BaseSize="80,80" />
 
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Resources\Images\" />
 	</ItemGroup>
 
 </Project>

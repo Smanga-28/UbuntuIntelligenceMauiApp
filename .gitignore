@@ -359,4 +359,4 @@ bin/
 obj/
 
 # User-specific files
-*.suo
+*.suo.vs/ 

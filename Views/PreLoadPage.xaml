@@ -2,11 +2,40 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ubuntu_Intelli_Compass.Views.PreLoadPage"
-             BackgroundImageSource="preloadbackground.png">
+             BackgroundColor="#000C1E">
+
     <Grid>
+
         <Image Source="preloadbackground.png"
                Aspect="AspectFill"
                HorizontalOptions="Fill"
                VerticalOptions="Fill" />
+
+        <VerticalStackLayout
+            VerticalOptions="End"
+            HorizontalOptions="Center"
+            Margin="30,0,30,70"
+            Spacing="15">
+
+            <Label Text="{Binding TitleText}"
+                   TextColor="White"
+                   FontSize="18"
+                   HorizontalOptions="Center" />
+
+            <ProgressBar x:Name="LoadingProgress"
+                         Progress="{Binding Progress}"
+                         ProgressColor="#00D4FF"
+                         BackgroundColor="#334155"
+                         WidthRequest="250"
+                         HeightRequest="8" />
+
+            <Label Text="{Binding StatusText}"
+                   TextColor="LightGray"
+                   FontSize="12"
+                   HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+
     </Grid>
+
 </ContentPage>

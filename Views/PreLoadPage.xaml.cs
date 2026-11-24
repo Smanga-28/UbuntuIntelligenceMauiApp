@@ -4,24 +4,32 @@ namespace Ubuntu_Intelli_Compass.Views;
 
 public partial class PreLoadPage : ContentPage
 {
-	private readonly PreLoadViewModel _viewModel;
-	
-    public PreLoadPage(PreLoadViewModel viewModel)
-	{
-		InitializeComponent();
-        _viewModel = viewModel;
-        BindingContext = viewModel;
-    }
-	private bool _started;
+    private bool isLoading;
 
-    protected override void OnAppearing()
+    public PreLoadPage()
     {
-        
+        InitializeComponent();
+        BindingContext = new PreLoadViewModel();
+    }
+
+    protected override async void OnAppearing()
+    {
         base.OnAppearing();
-        if(_started)
+
+        if (isLoading)
             return;
 
-        _started = true;
-        
+        if (BindingContext is not PreLoadViewModel vm)
+            return;
+
+        isLoading = true;
+        try
+        {
+            await vm.StartLoading();
+        }
+        finally
+        {
+            isLoading = false;
+        }
     }
 }

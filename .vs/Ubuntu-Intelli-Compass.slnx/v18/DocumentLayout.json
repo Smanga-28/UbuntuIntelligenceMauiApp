@@ -7,20 +7,27 @@
       "RelativeMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|solutionrelative:views\\preloadpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|c:\\users\\smangaliso masiphula\\source\\repos\\ubuntu-intelli-compass\\views\\preloadpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|solutionrelative:views\\preloadpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|c:\\users\\smangaliso masiphula\\source\\repos\\ubuntu-intelli-compass\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|c:\\users\\smangaliso masiphula\\source\\repos\\ubuntu-intelli-compass\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|solutionrelative:appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|c:\\users\\smangaliso masiphula\\source\\repos\\ubuntu-intelli-compass\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|solutionrelative:mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Smangaliso Masiphula\\.nuget\\packages\\microsoft.maui.resizetizer\\10.0.20\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|c:\\users\\smangaliso masiphula\\source\\repos\\ubuntu-intelli-compass\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|c:\\users\\smangaliso masiphula\\source\\repos\\ubuntu-intelli-compass\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|c:\\users\\smangaliso masiphula\\source\\repos\\ubuntu-intelli-compass\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|c:\\users\\smangaliso masiphula\\source\\repos\\ubuntu-intelli-compass\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|c:\\users\\smangaliso masiphula\\source\\repos\\ubuntu-intelli-compass\\ubuntu-intelli-compass.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -31,12 +38,12 @@
       "RelativeMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|solutionrelative:viewmodels\\preloadviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|c:\\users\\smangaliso masiphula\\source\\repos\\ubuntu-intelli-compass\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|c:\\users\\smangaliso masiphula\\source\\repos\\ubuntu-intelli-compass\\views\\preloadpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|solutionrelative:views\\preloadpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|c:\\users\\smangaliso masiphula\\source\\repos\\ubuntu-intelli-compass\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|c:\\users\\smangaliso masiphula\\source\\repos\\ubuntu-intelli-compass\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A291610A-844D-14DC-987A-D9C9A0D03365}|Ubuntu-Intelli-Compass.csproj|solutionrelative:appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +53,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,7 +69,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Smangaliso Masiphula\\source\\repos\\Ubuntu-Intelli-Compass\\MainPage.xaml",
+              "RelativeDocumentMoniker": "MainPage.xaml",
+              "ToolTip": "C:\\Users\\Smangaliso Masiphula\\source\\repos\\Ubuntu-Intelli-Compass\\MainPage.xaml",
+              "RelativeToolTip": "MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-23T13:50:30.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Microsoft.Maui.Resizetizer.After.targets",
+              "DocumentMoniker": "C:\\Users\\Smangaliso Masiphula\\.nuget\\packages\\microsoft.maui.resizetizer\\10.0.20\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\.nuget\\packages\\microsoft.maui.resizetizer\\10.0.20\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets",
+              "ToolTip": "C:\\Users\\Smangaliso Masiphula\\.nuget\\packages\\microsoft.maui.resizetizer\\10.0.20\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets",
+              "RelativeToolTip": "..\\..\\..\\.nuget\\packages\\microsoft.maui.resizetizer\\10.0.20\\buildTransitive\\Microsoft.Maui.Resizetizer.After.targets",
+              "ViewState": "AgIAAJwBAAAAAAAAAAAewKYBAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-11-23T12:39:55.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "C:\\Users\\Smangaliso Masiphula\\source\\repos\\Ubuntu-Intelli-Compass\\MauiProgram.cs",
               "RelativeDocumentMoniker": "MauiProgram.cs",
@@ -70,12 +101,11 @@
               "RelativeToolTip": "MauiProgram.cs",
               "ViewState": "AgIAAA8AAABgaGZmZmYkwBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-23T09:55:17.495Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-23T09:55:17.495Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Smangaliso Masiphula\\source\\repos\\Ubuntu-Intelli-Compass\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",
@@ -83,12 +113,11 @@
               "RelativeToolTip": "App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-23T09:53:33.576Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-23T09:53:33.576Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "AppShell.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Smangaliso Masiphula\\source\\repos\\Ubuntu-Intelli-Compass\\AppShell.xaml.cs",
               "RelativeDocumentMoniker": "AppShell.xaml.cs",
@@ -96,34 +125,31 @@
               "RelativeToolTip": "AppShell.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-23T09:20:08.006Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-23T09:20:08.006Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "C:\\Users\\Smangaliso Masiphula\\source\\repos\\Ubuntu-Intelli-Compass\\AppShell.xaml",
               "RelativeDocumentMoniker": "AppShell.xaml",
               "ToolTip": "C:\\Users\\Smangaliso Masiphula\\source\\repos\\Ubuntu-Intelli-Compass\\AppShell.xaml",
               "RelativeToolTip": "AppShell.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAKzMzMzP7vwoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-11-23T09:16:29.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-23T09:16:29.504Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "PreLoadPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Smangaliso Masiphula\\source\\repos\\Ubuntu-Intelli-Compass\\Views\\PreLoadPage.xaml.cs",
               "RelativeDocumentMoniker": "Views\\PreLoadPage.xaml.cs",
               "ToolTip": "C:\\Users\\Smangaliso Masiphula\\source\\repos\\Ubuntu-Intelli-Compass\\Views\\PreLoadPage.xaml.cs",
               "RelativeToolTip": "Views\\PreLoadPage.xaml.cs",
-              "ViewState": "AgIAAAUAAAAAmZmZmZkhwBIAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAADAYmZmZmYowCIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-23T08:40:18.69Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-23T08:40:18.69Z"
             },
             {
               "$type": "Document",
@@ -133,28 +159,27 @@
               "RelativeDocumentMoniker": "Views\\PreLoadPage.xaml",
               "ToolTip": "C:\\Users\\Smangaliso Masiphula\\source\\repos\\Ubuntu-Intelli-Compass\\Views\\PreLoadPage.xaml",
               "RelativeToolTip": "Views\\PreLoadPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAHiAPQkAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-11-23T08:37:30.895Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "PreLoadViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Smangaliso Masiphula\\source\\repos\\Ubuntu-Intelli-Compass\\ViewModels\\PreLoadViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\PreLoadViewModel.cs",
               "ToolTip": "C:\\Users\\Smangaliso Masiphula\\source\\repos\\Ubuntu-Intelli-Compass\\ViewModels\\PreLoadViewModel.cs",
               "RelativeToolTip": "ViewModels\\PreLoadViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAuwEsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-23T08:36:51.334Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-23T08:36:51.334Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Ubuntu-Intelli-Compass",
+              "DocumentIndex": 7,
+              "Title": "Ubuntu-Intelli-Compass.csproj",
               "DocumentMoniker": "C:\\Users\\Smangaliso Masiphula\\source\\repos\\Ubuntu-Intelli-Compass\\Ubuntu-Intelli-Compass.csproj",
               "RelativeDocumentMoniker": "Ubuntu-Intelli-Compass.csproj",
               "ToolTip": "C:\\Users\\Smangaliso Masiphula\\source\\repos\\Ubuntu-Intelli-Compass\\Ubuntu-Intelli-Compass.csproj",
@@ -166,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Smangaliso Masiphula\\source\\repos\\Ubuntu-Intelli-Compass\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -174,8 +199,7 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AgIAAAsAAABkMzMzM7M1wAgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-16T13:13:51.294Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-16T13:13:51.294Z"
             }
           ]
         },

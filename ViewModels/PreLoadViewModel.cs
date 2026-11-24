@@ -65,7 +65,7 @@ public class PreLoadViewModel : INotifyPropertyChanged
 
        
         if (Shell.Current is not null)
-            await Shell.Current.GoToAsync("//MainPage");
+            await Shell.Current.GoToAsync("//RegisterPage");
     }
 
     

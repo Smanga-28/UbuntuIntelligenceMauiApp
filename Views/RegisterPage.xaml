@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModels="clr-namespace:Ubuntu_Intelli_Compass.ViewModels"
+    x:Class="Ubuntu_Intelli_Compass.Views.RegisterPage"
+    x:DataType="viewModels:RegisterViewModel"
+    Shell.NavBarIsVisible="False"
+    BackgroundColor="#00151D">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <!-- Input field style -->
+            <Style x:Key="InputBorderStyle"
+                   TargetType="Border">
+                <Setter Property="BackgroundColor" Value="#F2F3F5"/>
+                <Setter Property="Stroke" Value="#E5E7EB"/>
+                <Setter Property="StrokeThickness" Value="1"/>
+                <Setter Property="HeightRequest" Value="51"/>
+                <Setter Property="Padding" Value="12,0"/>
+                <Setter Property="StrokeShape">
+                    <Setter.Value>
+                        <RoundRectangle CornerRadius="11"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!-- Entry style -->
+            <Style x:Key="InputEntryStyle"
+                   TargetType="Entry">
+                <Setter Property="TextColor" Value="#17232A"/>
+                <Setter Property="PlaceholderColor" Value="#879198"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+            <!-- Sign up gradient -->
+            <LinearGradientBrush x:Key="SignUpGradient"
+                                 StartPoint="0,0"
+                                 EndPoint="0,1">
+                <GradientStop Color="#FFE94A" Offset="0.0"/>
+                <GradientStop Color="#FFAA00" Offset="1.0"/>
+            </LinearGradientBrush>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <Grid RowDefinitions="Auto,*">
+
+        <!-- TOP HEADER -->
+        <Grid Grid.Row="0"
+              Padding="15,8"
+              ColumnDefinitions="*,Auto"
+              BackgroundColor="#00212B">
+
+            <Label Grid.Column="0"
+                   Text="Partner Banking Mini-App · 0MB install"
+                   FontSize="12"
+                   TextColor="#A9BEC5"
+                   VerticalOptions="Center"/>
+
+            <Label Grid.Column="1"
+                   Text="Host Settings"
+                   FontSize="12"
+                   FontAttributes="Bold"
+                   TextColor="#00D9D0"
+                   VerticalOptions="Center"/>
+
+        </Grid>
+
+
+        <!-- MAIN CONTENT -->
+        <ScrollView Grid.Row="1">
+
+            <VerticalStackLayout
+                Padding="30,25,30,35"
+                Spacing="0">
+
+                <!-- UBUNTU LOGO -->
+                <HorizontalStackLayout
+                    HorizontalOptions="Center"
+                    Spacing="10"
+                    Margin="0,0,0,22">
+
+                    <Label Text="✥"
+                           FontSize="39"
+                           TextColor="#FFD52A"
+                           VerticalOptions="Center"/>
+
+                    <Label Text="Ubuntu&#10;Intelli-Compass"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           VerticalOptions="Center"/>
+
+                </HorizontalStackLayout>
+
+
+                <!-- PAGE TITLE -->
+                <Label Text="Create Your Account"
+                       FontSize="27"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,0,0,23"/>
+
+
+                <!-- FIRST NAME -->
+                <Border Style="{StaticResource InputBorderStyle}"
+                        Margin="0,0,0,12">
+
+                    <Grid ColumnDefinitions="30,*">
+
+                        <Label Text="♙"
+                               FontSize="22"
+                               TextColor="#42545D"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"/>
+
+                        <Entry Grid.Column="1"
+                               Placeholder="First Name"
+                               Text="{Binding NewUser.FirstName}"
+                               Style="{StaticResource InputEntryStyle}"/>
+
+                    </Grid>
+                </Border>
+
+
+                <!-- LAST NAME -->
+                <Border Style="{StaticResource InputBorderStyle}"
+                        Margin="0,0,0,12">
+
+                    <Grid ColumnDefinitions="30,*">
+
+                        <Label Text="♙"
+                               FontSize="22"
+                               TextColor="#42545D"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"/>
+
+                        <Entry Grid.Column="1"
+                               Placeholder="Last Name"
+                               Text="{Binding NewUser.LastName}"
+                               Style="{StaticResource InputEntryStyle}"/>
+
+                    </Grid>
+                </Border>
+
+
+                <!-- EMAIL ADDRESS -->
+                <Border Style="{StaticResource InputBorderStyle}"
+                        Margin="0,0,0,12">
+
+                    <Grid ColumnDefinitions="30,*">
+
+                        <Label Text="✉"
+                               FontSize="20"
+                               TextColor="#42545D"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"/>
+
+                        <Entry Grid.Column="1"
+                               Placeholder="Email Address"
+                               Text="{Binding NewUser.Email}"
+                               Keyboard="Email"
+                               Style="{StaticResource InputEntryStyle}"/>
+
+                    </Grid>
+                </Border>
+
+               <!--Phone number--> 
+                
+                <Border Style="{StaticResource InputBorderStyle}"
+                        Margin="0,0,0,12">
+
+                    <Grid ColumnDefinitions="30,*">
+
+                        <Label Text="♙"
+                                   FontSize="22"
+                                   TextColor="#42545D"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"/>
+
+                        <Entry Grid.Column="1"
+               Placeholder="Phone number"
+               Text="{Binding NewUser.PhoneNumber}"
+               Style="{StaticResource InputEntryStyle}"/>
+
+                    </Grid>
+                </Border>
+
+
+                <!-- GENDER -->
+                <Border Style="{StaticResource InputBorderStyle}"
+                        Margin="0,0,0,12">
+
+                    <Grid ColumnDefinitions="30,*">
+
+                        <Label Text="♧"
+                               FontSize="20"
+                               TextColor="#42545D"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"/>
+
+                        <Picker Grid.Column="1"
+                                Title="Gender"
+                                FontSize="15"
+                                SelectedItem="{Binding NewUser.Gender}"
+                                TextColor="#17232A"
+                                TitleColor="#879198"
+                                BackgroundColor="Transparent"
+                                VerticalOptions="Center">
+
+                            <Picker.Items>
+                                <x:String>Male</x:String>
+                                <x:String>Female</x:String>
+                                <x:String>Prefer not to say</x:String>
+                            </Picker.Items>
+
+                        </Picker>
+
+                    </Grid>
+                </Border>
+
+
+                <!-- DATE OF BIRTH -->
+                <Border Style="{StaticResource InputBorderStyle}"
+                        Margin="0,0,0,23">
+
+                    <Grid ColumnDefinitions="30,*">
+
+                        <Label Text="▦"
+                               FontSize="22"
+                               TextColor="#42545D"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"/>
+
+                        <DatePicker Grid.Column="1"
+                                    Format="yyyy/MM/dd"
+                                    FontSize="15"
+                                    Date="{Binding NewUser.DateOfBirth}"
+                                    TextColor="#17232A"
+                                    BackgroundColor="Transparent"
+                                    VerticalOptions="Center"/>
+
+                    </Grid>
+                </Border>
+
+
+                <!-- SIGN UP BUTTON -->
+                <Button Text="SIGN UP"
+                        FontSize="16"
+                        Command="{Binding RegisterCommand}"
+                        FontAttributes="Bold"
+                        TextColor="#06151B"
+                        HeightRequest="58"
+                        CornerRadius="30"
+                        Background="{StaticResource SignUpGradient}"
+                        Margin="0,0,0,19"/>
+
+                <Label Text="{Binding RegistrationMessage}"
+                       TextColor="#00D9D0"
+                       FontSize="13"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,0,0,10"/>  
+
+
+                <!-- LOGIN -->
+                <HorizontalStackLayout
+                    HorizontalOptions="Center"
+                    Spacing="3"
+                    Margin="0,0,0,13">
+
+                    <Label Text="Already have an account?"
+                           FontSize="14"
+                           TextColor="#C4D2D7"
+                           VerticalOptions="Center"/>
+
+                    <Label Text="Log In"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           TextColor="#00D9D0"
+                           VerticalOptions="Center"/>
+
+                </HorizontalStackLayout>
+
+
+                <!-- FOOTER -->
+                <Label Text="Prototype only — use sample details. You must be 18+ to create a demo profile."
+                       FontSize="12"
+                       TextColor="#8DA6AF"
+                       HorizontalTextAlignment="Center"
+                       HorizontalOptions="Center"
+                       LineBreakMode="WordWrap"
+                       Margin="0,0,0,10"/>
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+    </Grid>
+
+</ContentPage>

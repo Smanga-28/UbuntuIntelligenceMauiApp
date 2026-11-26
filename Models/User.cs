@@ -3,10 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
+using SQLite;
 
 namespace Ubuntu_Intelli_Compass.Models;
 
-
+[Table("USERS")]
 public class User
 {
     [PrimaryKey, AutoIncrement]

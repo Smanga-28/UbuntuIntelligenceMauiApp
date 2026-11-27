@@ -1,4 +1,4 @@
-﻿using System.Text.RegularExpressions;
+using System.Text.RegularExpressions;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using SQLite;
@@ -11,11 +11,7 @@ namespace Ubuntu_Intelli_Compass.ViewModels
     {
         private readonly UbuntuDatabaseService _ubuntuDatabaseService;
 
-        // Holds the information entered by the user.
-        // NOTE: must be a *private* field. The toolkit generates the public
-        // property "NewUser" from it, and XAML binds to that property.
-        // (MAUI bindings cannot bind to fields, which is why the form
-        //  values never reached the User object before.)
+       
         [ObservableProperty]
         private User newUser = new();
 
@@ -46,6 +42,8 @@ namespace Ubuntu_Intelli_Compass.ViewModels
                 {
                     RegistrationMessage = "Account created successfully!";
                     NewUser = new User();
+                    await Shell.Current.GoToAsync("//CreatePinPage");
+
                 }
             }
             finally
@@ -78,7 +76,7 @@ namespace Ubuntu_Intelli_Compass.ViewModels
                     return false;
                 }
 
-                if (!Regex.IsMatch(user.PhoneNumber, @"^\+?[0-9\s\-]{9,15}$"))
+                if (!Regex.IsMatch(user.PhoneNumber, @"^\+?[0-9\s\-]{9,10}$"))
                 {
                     RegistrationMessage = "Please enter a valid phone number.";
                     return false;

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Ubuntu_Intelli_Compass.ViewModels
 {
-    class AuthViewModel
+    public class CreatePinViewModel
     {
     }
 }

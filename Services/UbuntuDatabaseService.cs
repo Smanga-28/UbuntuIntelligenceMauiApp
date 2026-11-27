@@ -1,4 +1,4 @@
-﻿using SQLite;
+using SQLite;
 
 namespace Ubuntu_Intelli_Compass.Services
 {

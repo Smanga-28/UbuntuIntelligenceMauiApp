@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 using Ubuntu_Intelli_Compass.Services;
 
 namespace Ubuntu_Intelli_Compass.ViewModels;

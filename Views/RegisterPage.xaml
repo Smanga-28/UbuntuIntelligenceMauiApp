@@ -51,26 +51,7 @@
 
     <Grid RowDefinitions="Auto,*">
 
-        <!-- TOP HEADER -->
-        <Grid Grid.Row="0"
-              Padding="15,8"
-              ColumnDefinitions="*,Auto"
-              BackgroundColor="#00212B">
-
-            <Label Grid.Column="0"
-                   Text="Partner Banking Mini-App · 0MB install"
-                   FontSize="12"
-                   TextColor="#A9BEC5"
-                   VerticalOptions="Center"/>
-
-            <Label Grid.Column="1"
-                   Text="Host Settings"
-                   FontSize="12"
-                   FontAttributes="Bold"
-                   TextColor="#00D9D0"
-                   VerticalOptions="Center"/>
-
-        </Grid>
+        
 
 
         <!-- MAIN CONTENT -->
@@ -78,7 +59,8 @@
 
             <VerticalStackLayout
                 Padding="30,25,30,35"
-                Spacing="0">
+                Spacing="0"
+                Margin="0,95">
 
                 <!-- UBUNTU LOGO -->
                 <HorizontalStackLayout
@@ -123,7 +105,7 @@
 
                         <Entry Grid.Column="1"
                                Placeholder="First Name"
-                               Text="{Binding newUser.FirstName}"
+                               Text="{Binding NewUser.FirstName}"
                                Style="{StaticResource InputEntryStyle}"/>
 
                     </Grid>
@@ -144,7 +126,7 @@
 
                         <Entry Grid.Column="1"
                                Placeholder="Last Name"
-                               Text="{Binding newUser.LastName}"
+                               Text="{Binding NewUser.LastName}"
                                Style="{StaticResource InputEntryStyle}"/>
 
                     </Grid>
@@ -165,7 +147,7 @@
 
                         <Entry Grid.Column="1"
                                Placeholder="Email Address"
-                               Text="{Binding newUser.Email}"
+                               Text="{Binding NewUser.Email}"
                                Keyboard="Email"
                                Style="{StaticResource InputEntryStyle}"/>
 
@@ -187,7 +169,7 @@
 
                         <Entry Grid.Column="1"
                Placeholder="Phone number"
-               Text="{Binding newUser.PhoneNumber}"
+               Text="{Binding NewUser.PhoneNumber}"
                Style="{StaticResource InputEntryStyle}"/>
 
                     </Grid>
@@ -209,7 +191,7 @@
                         <Picker Grid.Column="1"
                                 Title="Gender"
                                 FontSize="15"
-                                SelectedItem="{Binding newUser.Gender}"
+                                SelectedItem="{Binding NewUser.Gender}"
                                 TextColor="#17232A"
                                 TitleColor="#879198"
                                 BackgroundColor="Transparent"
@@ -242,7 +224,7 @@
                         <DatePicker Grid.Column="1"
                                     Format="yyyy/MM/dd"
                                     FontSize="15"
-                                    Date="{Binding newUser.DateOfBirth}"
+                                    Date="{Binding NewUser.DateOfBirth}"
                                     TextColor="#17232A"
                                     BackgroundColor="Transparent"
                                     VerticalOptions="Center"/>
@@ -288,15 +270,6 @@
 
                 </HorizontalStackLayout>
 
-
-                <!-- FOOTER -->
-                <Label Text="Prototype only — use sample details. You must be 18+ to create a demo profile."
-                       FontSize="12"
-                       TextColor="#8DA6AF"
-                       HorizontalTextAlignment="Center"
-                       HorizontalOptions="Center"
-                       LineBreakMode="WordWrap"
-                       Margin="0,0,0,10"/>
 
             </VerticalStackLayout>
 

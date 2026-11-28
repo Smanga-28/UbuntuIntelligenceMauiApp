@@ -77,7 +77,7 @@ namespace Ubuntu_Intelli_Compass.ViewModels
 
             if(pin != confirmPin)
             {
-                ValidationMessage = "Pin not match";
+                ValidationMessage = "Pin do not match";
                 HasValidatedMessage= true;
                 return;
 

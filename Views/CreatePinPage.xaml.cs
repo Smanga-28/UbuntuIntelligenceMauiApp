@@ -1,12 +1,15 @@
+using Ubuntu_Intelli_Compass.ViewModels;
 namespace Ubuntu_Intelli_Compass.Views;
 
 public partial class CreatePinPage : ContentPage
 {
-	public CreatePinPage()
+    private readonly CreatePinViewModel _viewModel;
+    public CreatePinPage(CreatePinViewModel viewModel)
 	{
 		InitializeComponent();
-        BindingContext = new CreatePinPage();
-	}
+        _viewModel = viewModel;
+        BindingContext = viewModel;
+    }
 
     private void OnPinTextChanged(object sender, TextChangedEventArgs e)
     {

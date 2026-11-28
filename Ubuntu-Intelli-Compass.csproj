@@ -65,6 +65,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<!-- Ship the starter database inside the app so it is always available at runtime -->
+		<EmbeddedResource Include="Resources\Raw\UbuntuIntelliCompass.db" LogicalName="UbuntuIntelliCompass.db" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.0" />
@@ -72,6 +77,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\CreatePinPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\PreLoadPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

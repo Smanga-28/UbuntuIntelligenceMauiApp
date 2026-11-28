@@ -1,12 +1,317 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Ubuntu_Intelli_Compass.Views.CreatePinPage"
-             Title="CreatePinPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModels="clr-namespace:Ubuntu_Intelli_Compass.ViewModels"
+    x:Class="Ubuntu_Intelli_Compass.Views.CreatePinPage"
+    x:DataType="viewModels:CreatePinViewModel"
+    Shell.NavBarIsVisible="False"
+    BackgroundColor="#00151D">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <!-- PIN input box style -->
+            <Style x:Key="PinBoxStyle"
+                   TargetType="Border">
+
+                <Setter Property="BackgroundColor"
+                        Value="#F2F3F5"/>
+
+                <Setter Property="Stroke"
+                        Value="#D6E0E5"/>
+
+                <Setter Property="StrokeThickness"
+                        Value="2"/>
+
+                <Setter Property="HeightRequest"
+                        Value="42"/>
+
+                <Setter Property="Padding"
+                        Value="2"/>
+
+                <Setter Property="StrokeShape">
+                    <Setter.Value>
+                        <RoundRectangle CornerRadius="9"/>
+                    </Setter.Value>
+                </Setter>
+
+            </Style>
+
+
+            <!-- PIN entry style -->
+            <Style x:Key="PinEntryStyle"
+                   TargetType="Entry">
+
+                <Setter Property="BackgroundColor"
+                        Value="Transparent"/>
+
+                <Setter Property="TextColor"
+                        Value="#00151D"/>
+
+                <Setter Property="FontSize"
+                        Value="20"/>
+
+                <Setter Property="HorizontalTextAlignment"
+                        Value="Center"/>
+
+                <Setter Property="VerticalTextAlignment"
+                        Value="Center"/>
+
+                <Setter Property="Keyboard"
+                        Value="Numeric"/>
+
+                <Setter Property="MaxLength"
+                        Value="1"/>
+
+                <Setter Property="IsPassword"
+                        Value="True"/>
+
+            </Style>
+
+
+            <!-- Create PIN gradient -->
+            <LinearGradientBrush x:Key="CreatePinGradient"
+                                 StartPoint="0,0"
+                                 EndPoint="0,1">
+
+                <GradientStop Color="#FFE94A"
+                              Offset="0.0"/>
+
+                <GradientStop Color="#FFAA00"
+                              Offset="1.0"/>
+
+            </LinearGradientBrush>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <Grid RowDefinitions="Auto,Auto,*">
+
+        <!-- STATUS BAR -->
+        <Grid Grid.Row="0"
+              Padding="15,8"
+              ColumnDefinitions="*,Auto"
+              BackgroundColor="#00151D">
+
+            <Label Grid.Column="0"
+                   Text="09:41"
+                   FontSize="13"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   VerticalOptions="Center"/>
+
+            <HorizontalStackLayout Grid.Column="1"
+                                   Spacing="7"
+                                   VerticalOptions="Center">
+
+                <Label Text="5G"
+                       FontSize="12"
+                       TextColor="White"
+                       FontAttributes="Bold"/>
+
+                <Label Text="▮▮▮"
+                       FontSize="12"
+                       TextColor="White"/>
+
+                <Label Text="▰"
+                       FontSize="18"
+                       TextColor="#00D9D0"/>
+
+            </HorizontalStackLayout>
+
+        </Grid>
+
+
+        <!-- TOP HEADER -->
+        <Grid Grid.Row="1"
+              Padding="15,12"
+              ColumnDefinitions="*,Auto"
+              BackgroundColor="#00212B">
+
+            <Label Grid.Column="0"
+                   Text="Partner Banking Mini-App · 0 MB install"
+                   FontSize="12"
+                   TextColor="#A9BEC5"
+                   VerticalOptions="Center"/>
+
+            <Label Grid.Column="1"
+                   Text="Host Settings"
+                   FontSize="12"
+                   FontAttributes="Bold"
+                   TextColor="#00D9D0"
+                   VerticalOptions="Center"/>
+
+        </Grid>
+
+
+        <!-- MAIN CONTENT -->
+        <ScrollView Grid.Row="2">
+
+            <VerticalStackLayout
+                Padding="22,30,22,35"
+                Spacing="0">
+
+                <!-- LOCK ICON -->
+                <Border
+                    WidthRequest="53"
+                    HeightRequest="53"
+                    Stroke="#167F89"
+                    StrokeThickness="1"
+                    BackgroundColor="#00313C"
+                    StrokeShape="RoundRectangle 16"
+                    HorizontalOptions="Center"
+                    Margin="0,0,0,19">
+
+                    <Label Text="&#x1F512;"
+                           FontSize="27"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+
+                </Border>
+
+
+                <!-- PAGE TITLE -->
+                <Label Text="Create PIN"
+                       FontSize="27"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,0,0,13"/>
+
+
+                <!-- DESCRIPTION -->
+                <Label Text="Create a 6-digit PIN to&#10;secure your account."
+                       FontSize="16"
+                       TextColor="#C4D2D7"
+                       HorizontalTextAlignment="Center"
+                       LineHeight="1.2"
+                       Margin="0,0,0,34"/>
+
+
+                <!-- CREATE PIN INPUTS -->
+                <Grid ColumnDefinitions="*,*,*,*,*,*"
+                      ColumnSpacing="6"
+                      Margin="0,0,0,33">
+
+                    <Border Grid.Column="0"
+                            Style="{StaticResource PinBoxStyle}">
+                        <Entry Style="{StaticResource PinEntryStyle}"
+                               Text="{Binding PinDigit1}"/>
+                    </Border>
+
+                    <Border Grid.Column="1"
+                            Style="{StaticResource PinBoxStyle}">
+                        <Entry Style="{StaticResource PinEntryStyle}"
+                               Text="{Binding PinDigit2}"/>
+                    </Border>
+
+                    <Border Grid.Column="2"
+                            Style="{StaticResource PinBoxStyle}">
+                        <Entry Style="{StaticResource PinEntryStyle}"
+                               Text="{Binding PinDigit3}"/>
+                    </Border>
+
+                    <Border Grid.Column="3"
+                            Style="{StaticResource PinBoxStyle}">
+                        <Entry Style="{StaticResource PinEntryStyle}"
+                               Text="{Binding PinDigit4}"/>
+                    </Border>
+
+                    <Border Grid.Column="4"
+                            Style="{StaticResource PinBoxStyle}">
+                        <Entry Style="{StaticResource PinEntryStyle}"
+                               Text="{Binding PinDigit5}"/>
+                    </Border>
+
+                    <Border Grid.Column="5"
+                            Style="{StaticResource PinBoxStyle}">
+                        <Entry Style="{StaticResource PinEntryStyle}"
+                               Text="{Binding PinDigit6}"/>
+                    </Border>
+
+                </Grid>
+
+
+                <!-- CONFIRM PIN TITLE -->
+                <Label Text="Confirm PIN"
+                       FontSize="19"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,0,0,23"/>
+
+
+                <!-- CONFIRM PIN INPUTS -->
+                <Grid ColumnDefinitions="*,*,*,*,*,*"
+                      ColumnSpacing="6"
+                      Margin="0,0,0,23">
+
+                    <Border Grid.Column="0"
+                            Style="{StaticResource PinBoxStyle}">
+                        <Entry Style="{StaticResource PinEntryStyle}"
+                               Text="{Binding ConfirmPinDigit1}"/>
+                    </Border>
+
+                    <Border Grid.Column="1"
+                            Style="{StaticResource PinBoxStyle}">
+                        <Entry Style="{StaticResource PinEntryStyle}"
+                               Text="{Binding ConfirmPinDigit2}"/>
+                    </Border>
+
+                    <Border Grid.Column="2"
+                            Style="{StaticResource PinBoxStyle}">
+                        <Entry Style="{StaticResource PinEntryStyle}"
+                               Text="{Binding ConfirmPinDigit3}"/>
+                    </Border>
+
+                    <Border Grid.Column="3"
+                            Style="{StaticResource PinBoxStyle}">
+                        <Entry Style="{StaticResource PinEntryStyle}"
+                               Text="{Binding ConfirmPinDigit4}"/>
+                    </Border>
+
+                    <Border Grid.Column="4"
+                            Style="{StaticResource PinBoxStyle}">
+                        <Entry Style="{StaticResource PinEntryStyle}"
+                               Text="{Binding ConfirmPinDigit5}"/>
+                    </Border>
+
+                    <Border Grid.Column="5"
+                            Style="{StaticResource PinBoxStyle}">
+                        <Entry Style="{StaticResource PinEntryStyle}"
+                               Text="{Binding ConfirmPinDigit6}"/>
+                    </Border>
+
+                </Grid>
+
+
+                <!-- CREATE PIN BUTTON -->
+                <Button Text="CREATE PIN"
+                        FontSize="16"
+                        Command="{Binding CreatePinCommand}"
+                        FontAttributes="Bold"
+                        TextColor="#06151B"
+                        HeightRequest="58"
+                        CornerRadius="30"
+                        Background="{StaticResource CreatePinGradient}"
+                        Margin="0,0,0,19"/>
+
+
+                <!-- FOOTER MESSAGE -->
+                <Label Text="Demo PIN only — do not reuse your real banking PIN."
+                       FontSize="12"
+                       TextColor="#8DA6AF"
+                       HorizontalTextAlignment="Center"
+                       HorizontalOptions="Center"
+                       Margin="0,0,0,10"/>
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+    </Grid>
+
 </ContentPage>

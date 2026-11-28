@@ -13,7 +13,10 @@ namespace Ubuntu_Intelli_Compass.ViewModels
         [ObservableProperty]
 
 
-        public CreatePinViewModel(UbuntuDatabaseService ubuntuDatabaseService)
+        public CreatePinViewModel(UbuntuDatabaseService ubuntuDatabas
+            
+            
+            eService)
         {
             _ubuntuDatabaseService = ubuntuDatabaseService;
         }

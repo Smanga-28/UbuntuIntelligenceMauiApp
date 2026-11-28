@@ -1,9 +1,6 @@
 
 using System.Text.RegularExpressions;
 using CommunityToolkit.Mvvm.ComponentModel;
-
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-
 using CommunityToolkit.Mvvm.Input;
 using SQLite;
 using Ubuntu_Intelli_Compass.Models;

@@ -1,37 +1,33 @@
 ﻿using SQLite;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
-using SQLite;
+
 
 namespace Ubuntu_Intelli_Compass.Models;
+
 
 [Table("USERS")]
 public class User
 {
-    [PrimaryKey, AutoIncrement]
+    [PrimaryKey, AutoIncrement, Column("user_id")]
     public int UserId { get; set; }
 
-    [NotNull, MaxLength(100)]
+    [Column("first_name"), NotNull, MaxLength(100)]
     public string FirstName { get; set; } = "";
 
-    [NotNull, MaxLength(100)]
+    [Column("last_name"), NotNull, MaxLength(100)]
     public string LastName { get; set; } = "";
 
-    [NotNull, MaxLength(100), Unique]
+    [Column("email"), NotNull, MaxLength(100), Unique]
     public string Email { get; set; } = "";
 
-    [NotNull, MaxLength(100)]
-    public string PhoneNumber { get; set; }
+    [Column("phone_number"), MaxLength(100)]
+    public string PhoneNumber { get; set; } = "";
 
-    [NotNull]
+    [Column("date_of_birth")]
     public DateTime DateOfBirth { get; set; } = DateTime.Today;
 
-
+    [Column("gender")]
     public string? Gender { get; set; }
 
-    [NotNull, MaxLength(100)]
+    [Column("created_at"), NotNull]
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-    
 }

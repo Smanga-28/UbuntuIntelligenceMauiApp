@@ -22,9 +22,9 @@ namespace Ubuntu_Intelli_Compass.Services
             return $"{Convert.ToHexString(hash)}-{Convert.ToHexString(salt)}";
         }
 
-        public bool Verify(string pin, string passwordHash)
+        public bool Verify(string pin, string pinHash)
         {
-            string[] parts = passwordHash.Split('-');
+            string[] parts = pinHash.Split('-');
             byte[] hash = Convert.FromHexString(parts[0]);
             byte[] salt = Convert.FromHexString(parts[1]);
 

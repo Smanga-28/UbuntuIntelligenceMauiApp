@@ -1,4 +1,9 @@
+
+using System.Text.RegularExpressions;
+using CommunityToolkit.Mvvm.ComponentModel;
+
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+
 using CommunityToolkit.Mvvm.Input;
 using SQLite;
 using Ubuntu_Intelli_Compass.Models;
@@ -10,65 +15,96 @@ namespace Ubuntu_Intelli_Compass.ViewModels
     {
         private readonly UbuntuDatabaseService _ubuntuDatabaseService;
 
-        // Holds the information entered by the user.
+       
         [ObservableProperty]
-        public User newUser = new();
+        private User newUser = new();
 
         // Displays registration feedback.
         [ObservableProperty]
         private string registrationMessage = string.Empty;
+
+        private bool _isBusy;
+
+        private int Age = 16;
 
         public RegisterViewModel(UbuntuDatabaseService ubuntuDatabaseService)
         {
             _ubuntuDatabaseService = ubuntuDatabaseService;
         }
 
-        // Called when the user presses Sign Up.
+        // Called when the user presses SIGN UP.
         [RelayCommand]
         private async Task RegisterAsync()
         {
-            RegistrationMessage = string.Empty;
+            if (_isBusy)
+                return;
 
-            bool isRegistered = await RegisterUserAsync(NewUser);
-
-            if (isRegistered)
+            _isBusy = true;
+            try
             {
-                RegistrationMessage = "Account created successfully!";
+                RegistrationMessage = string.Empty;
 
-                NewUser = new User();
+                if (await RegisterUserAsync(NewUser))
+                {
+                    RegistrationMessage = "Account created successfully!";
+                    NewUser = new User();
+                    await Shell.Current.GoToAsync("//CreatePinPage");
+
+                }
+            }
+            finally
+            {
+                _isBusy = false;
             }
         }
 
-        // Handles the actual registration process.
         public async Task<bool> RegisterUserAsync(User user)
         {
             try
             {
-                // Check required information.
-                if (string.IsNullOrWhiteSpace(user.FirstName) ||
-                    string.IsNullOrWhiteSpace(user.LastName) ||
-                    string.IsNullOrWhiteSpace(user.Email) ||
-                    string.IsNullOrWhiteSpace(user.PhoneNumber))
+                user.FirstName = (user.FirstName ?? "").Trim();
+                user.LastName = (user.LastName ?? "").Trim();
+                user.PhoneNumber = (user.PhoneNumber ?? "").Trim();
+                user.Email = NormalizeEmail(user.Email);
+
+                if (user.FirstName.Length == 0 ||
+                    user.LastName.Length == 0 ||
+                    user.Email.Length == 0 ||
+                    user.PhoneNumber.Length == 0)
                 {
                     RegistrationMessage = "Please complete all required fields.";
                     return false;
                 }
 
-                // Normalise email.
-                user.Email = NormalizeEmail(user.Email);
-
-                // Validate email.
                 if (!ValidateEmail(user.Email))
                 {
                     RegistrationMessage = "Please enter a valid email address.";
                     return false;
                 }
 
-                // Get database connection.
+                if (!Regex.IsMatch(user.PhoneNumber, @"^\+?[0-9\s\-]{9,10}$"))
+                {
+                    RegistrationMessage = "Please enter a valid phone number.";
+                    return false;
+                }
+
+                
+                if (user.DateOfBirth.Date >= DateTime.Today || user.DateOfBirth.Year < 1900)
+                {
+                    RegistrationMessage = "Please choose your date of birth.";
+                    return false;
+                }
+
+                if (!IsUserAtleast16(user.DateOfBirth))
+                {
+                    RegistrationMessage = $"You must be at least {Age} years old to open an account.";
+                    return false;
+                }
+                
+
                 SQLiteAsyncConnection connection =
                     await _ubuntuDatabaseService.GetDbConnectionAsync();
 
-                // Check if email already exists.
                 var existingUser = await connection.Table<User>()
                     .Where(u => u.Email == user.Email)
                     .FirstOrDefaultAsync();
@@ -79,28 +115,44 @@ namespace Ubuntu_Intelli_Compass.ViewModels
                     return false;
                 }
 
-                // Save the new user.
-                await connection.InsertAsync(user);
+                user.CreatedAt = DateTime.UtcNow;
+
+                int rows = await connection.InsertAsync(user);
+                if (rows != 1)
+                {
+                    RegistrationMessage = "Your account could not be saved. Please try again.";
+                    return false;
+                }
 
                 return true;
             }
+            catch (SQLiteException ex) when (ex.Result == SQLite3.Result.Constraint)
+            {
+                System.Diagnostics.Debug.WriteLine(ex);
+                RegistrationMessage = "This email is already registered.";
+                return false;
+            }
             catch (Exception ex)
             {
+                System.Diagnostics.Debug.WriteLine(ex);
                 RegistrationMessage = "Registration error: " + ex.Message;
-
-                Console.WriteLine(ex.ToString());
-
                 return false;
             }
         }
 
-        // Remove unnecessary spaces and convert email to lowercase.
-        private static string NormalizeEmail(string email)
+        private static string NormalizeEmail(string? email)
+            => email?.Trim().ToLowerInvariant() ?? string.Empty;
+
+        private bool IsUserAtleast16(DateTime dateOfBirth) 
         {
-            return email?.Trim().ToLowerInvariant() ?? string.Empty;
+            DateTime minimumDateOfBirth = DateTime.Today.AddYears(-16);
+            if(dateOfBirth.Date > minimumDateOfBirth)
+            {
+                return false;
+            }
+            return true;
         }
 
-        // Validate email format.
         private static bool ValidateEmail(string email)
         {
             try

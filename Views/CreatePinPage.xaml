@@ -52,7 +52,7 @@
                         Value="#00151D"/>
 
                 <Setter Property="FontSize"
-                        Value="20"/>
+                        Value="13"/>
 
                 <Setter Property="HorizontalTextAlignment"
                         Value="Center"/>
@@ -68,6 +68,7 @@
 
                 <Setter Property="IsPassword"
                         Value="True"/>
+                
 
             </Style>
 
@@ -147,37 +148,49 @@
                     <Border Grid.Column="0"
                             Style="{StaticResource PinBoxStyle}">
                         <Entry Style="{StaticResource PinEntryStyle}"
-                               Text="{Binding PinDigit1}"/>
+                               x:Name="PinDigitEntry1"
+                               Text="{Binding PinDigit1}"
+                               TextChanged="OnPinTextChanged"/>
                     </Border>
 
                     <Border Grid.Column="1"
                             Style="{StaticResource PinBoxStyle}">
                         <Entry Style="{StaticResource PinEntryStyle}"
-                               Text="{Binding PinDigit2}"/>
+                               x:Name="PinDigitEntry2"
+                               Text="{Binding PinDigit2}"
+                               TextChanged="OnPinTextChanged"/>
                     </Border>
 
                     <Border Grid.Column="2"
                             Style="{StaticResource PinBoxStyle}">
                         <Entry Style="{StaticResource PinEntryStyle}"
-                               Text="{Binding PinDigit3}"/>
+                               x:Name="PinDigitEntry3"
+                               Text="{Binding PinDigit3}"
+                               TextChanged="OnPinTextChanged"/>
                     </Border>
 
                     <Border Grid.Column="3"
                             Style="{StaticResource PinBoxStyle}">
                         <Entry Style="{StaticResource PinEntryStyle}"
-                               Text="{Binding PinDigit4}"/>
+                               x:Name="PinDigitEntry4"
+                               Text="{Binding PinDigit4}"
+                               TextChanged="OnPinTextChanged"/>
                     </Border>
 
                     <Border Grid.Column="4"
                             Style="{StaticResource PinBoxStyle}">
                         <Entry Style="{StaticResource PinEntryStyle}"
-                               Text="{Binding PinDigit5}"/>
+                               x:Name="PinDigitEntry5"
+                               Text="{Binding PinDigit5}"
+                               TextChanged="OnPinTextChanged"/>
                     </Border>
 
                     <Border Grid.Column="5"
                             Style="{StaticResource PinBoxStyle}">
                         <Entry Style="{StaticResource PinEntryStyle}"
-                               Text="{Binding PinDigit6}"/>
+                               x:Name="PinDigitEntry6"
+                               Text="{Binding PinDigit6}"
+                               TextChanged="OnPinTextChanged"/>
                     </Border>
 
                 </Grid>
@@ -200,46 +213,68 @@
                     <Border Grid.Column="0"
                             Style="{StaticResource PinBoxStyle}">
                         <Entry Style="{StaticResource PinEntryStyle}"
-                               Text="{Binding ConfirmPinDigit1}"/>
+                               x:Name="ConfirmPinDigitEntry1"
+                               Text="{Binding ConfirmPinDigit1}"
+                               TextChanged="OnPinTextChanged"/>
                     </Border>
 
                     <Border Grid.Column="1"
                             Style="{StaticResource PinBoxStyle}">
                         <Entry Style="{StaticResource PinEntryStyle}"
-                               Text="{Binding ConfirmPinDigit2}"/>
+                               x:Name="ConfirmPinDigitEntry2"
+                               Text="{Binding ConfirmPinDigit2}"
+                               TextChanged="OnPinTextChanged"/>
                     </Border>
 
                     <Border Grid.Column="2"
                             Style="{StaticResource PinBoxStyle}">
                         <Entry Style="{StaticResource PinEntryStyle}"
-                               Text="{Binding ConfirmPinDigit3}"/>
+                               x:Name="ConfirmPinDigitEntry3"
+                               Text="{Binding ConfirmPinDigit3}"
+                               TextChanged="OnPinTextChanged"/>
                     </Border>
 
                     <Border Grid.Column="3"
                             Style="{StaticResource PinBoxStyle}">
                         <Entry Style="{StaticResource PinEntryStyle}"
-                               Text="{Binding ConfirmPinDigit4}"/>
+                               x:Name="ConfirmPinDigitEntry4"
+                               Text="{Binding ConfirmPinDigit4}"
+                               TextChanged="OnPinTextChanged"/>
                     </Border>
 
                     <Border Grid.Column="4"
                             Style="{StaticResource PinBoxStyle}">
                         <Entry Style="{StaticResource PinEntryStyle}"
-                               Text="{Binding ConfirmPinDigit5}"/>
+                               x:Name="ConfirmPinDigitEntry5"
+                               Text="{Binding ConfirmPinDigit5}"
+                               TextChanged="OnPinTextChanged"/>
                     </Border>
 
                     <Border Grid.Column="5"
                             Style="{StaticResource PinBoxStyle}">
                         <Entry Style="{StaticResource PinEntryStyle}"
-                               Text="{Binding ConfirmPinDigit6}"/>
+                               x:Name="ConfirmPinDigitEntry6"
+                               Text="{Binding ConfirmPinDigit6}"
+                               TextChanged="OnPinTextChanged"/>
                     </Border>
 
                 </Grid>
 
+                <!-- VALIDATION MESSAGE -->
+                <Grid Margin="0,0,0,10">
+                    <Label Text="{Binding ValidationMessage}"
+                           FontSize="14"
+                           TextColor="Red"
+                           HorizontalTextAlignment="Center"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           IsVisible="{Binding HasValidatedMessage}"/>
+                </Grid>
 
                 <!-- CREATE PIN BUTTON -->
                 <Button Text="CREATE PIN"
                         FontSize="16"
-                        Command="{Binding CreatePinCommand}"
+                        Command="{Binding ValidatePinCommand}"
                         FontAttributes="Bold"
                         TextColor="#06151B"
                         HeightRequest="58"
@@ -248,7 +283,7 @@
                         Margin="0,0,0,19"/>
 
 
-            
+
 
             </VerticalStackLayout>
 

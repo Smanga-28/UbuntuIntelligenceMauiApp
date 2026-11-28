@@ -25,6 +25,8 @@ namespace Ubuntu_Intelli_Compass.ViewModels
 
         private bool _isBusy;
 
+        private int Age = 16;
+
         public RegisterViewModel(UbuntuDatabaseService ubuntuDatabaseService)
         {
             _ubuntuDatabaseService = ubuntuDatabaseService;
@@ -86,12 +88,19 @@ namespace Ubuntu_Intelli_Compass.ViewModels
                     return false;
                 }
 
-                // DatePicker starts on today's date, so "today" means "not chosen yet".
+                
                 if (user.DateOfBirth.Date >= DateTime.Today || user.DateOfBirth.Year < 1900)
                 {
                     RegistrationMessage = "Please choose your date of birth.";
                     return false;
                 }
+
+                if (!IsUserAtleast16(user.DateOfBirth))
+                {
+                    RegistrationMessage = $"You must be at least {Age} years old to open an account.";
+                    return false;
+                }
+                
 
                 SQLiteAsyncConnection connection =
                     await _ubuntuDatabaseService.GetDbConnectionAsync();
@@ -133,6 +142,16 @@ namespace Ubuntu_Intelli_Compass.ViewModels
 
         private static string NormalizeEmail(string? email)
             => email?.Trim().ToLowerInvariant() ?? string.Empty;
+
+        private bool IsUserAtleast16(DateTime dateOfBirth) 
+        {
+            DateTime minimumDateOfBirth = DateTime.Today.AddYears(-16);
+            if(dateOfBirth.Date > minimumDateOfBirth)
+            {
+                return false;
+            }
+            return true;
+        }
 
         private static bool ValidateEmail(string email)
         {
